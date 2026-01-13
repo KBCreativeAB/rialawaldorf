@@ -12,7 +12,7 @@ const HeroSection = () => {
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const iconMap: Record<string, React.ReactNode> = {
-    "Utbildad personal i Barn HLR": <Shield className="w-5 h-5" />,
+    "Personal utbildad i Barn-HLR": <Shield className="w-5 h-5" />,
     "Hemlik och trygg miljö": <Home className="w-5 h-5" />,
   };
   return (
