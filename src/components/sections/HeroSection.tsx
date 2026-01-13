@@ -79,7 +79,7 @@ const HeroSection = () => {
 
             {/* Floating badge */}
             <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-10 bg-card px-6 py-4 md:px-10 md:py-6 rounded-2xl shadow-card animate-float">
-              <p className="text-sm text-muted-foreground">Waldorfpedagogik sedan</p>
+              <p className="text-xl text-muted-foreground">Waldorfpedagogik sedan</p>
               <p className="font-serif text-2xl md:text-3xl font-bold text-coral">1994</p>
             </div>
           </div>
