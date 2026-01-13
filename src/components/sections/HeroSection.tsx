@@ -25,7 +25,7 @@ const HeroSection = () => {
               {siteContent.hero.title}
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl font-bold">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
               {siteContent.hero.subtitle}
             </p>
 
