@@ -36,21 +36,18 @@ const PracticalSection = () => {
           ))}
         </div>
 
-        {/* Map placeholder */}
-        <div className="rounded-3xl overflow-hidden shadow-card bg-secondary/30 h-[300px] md:h-[400px] flex items-center justify-center">
-          <div className="text-center p-8">
-            <MapPin className="w-12 h-12 text-coral mx-auto mb-4" />
-            <h3 className="font-serif text-xl font-semibold mb-2">Riala Kyrkväg 6</h3>
-            <p className="text-muted-foreground">761 73 Riala, Norrtälje kommun</p>
-            <a
-              href="https://maps.google.com/?q=Riala+Kyrkväg+6,+761+73+Riala"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-coral hover:text-coral/80 font-medium underline underline-offset-4"
-            >
-              Öppna i Google Maps →
-            </a>
-          </div>
+        {/* Interactive Google Map */}
+        <div className="rounded-3xl overflow-hidden shadow-card h-[300px] md:h-[400px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2018.5!2d18.5267!3d59.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9a8d7e8b9c3d%3A0x1234567890abcdef!2sRiala%20Kyrkv%C3%A4g%206%2C%20761%2073%20Riala!5e0!3m2!1ssv!2sse!4v1704067200000!5m2!1ssv!2sse"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Riala Waldorfförskola location"
+          />
         </div>
       </div>
     </section>
