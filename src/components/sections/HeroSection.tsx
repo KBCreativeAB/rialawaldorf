@@ -1,17 +1,16 @@
-import { Shield, Home, Leaf, ArrowDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { siteContent } from '@/data/siteContent';
-import heroBg from '@/assets/hero-bg.png';
+import { Shield, Home, Leaf, ArrowDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { siteContent } from "@/data/siteContent";
 
 const HeroSection = () => {
   const iconMap: Record<string, React.ReactNode> = {
-    'Utbildad personal i Barn HLR': <Shield className="w-5 h-5" />,
-    'Hemlik och trygg miljö': <Home className="w-5 h-5" />,
-    'Waldorfpedagogik sedan 1994': <Leaf className="w-5 h-5" />,
+    "Utbildad personal i Barn HLR": <Shield className="w-5 h-5" />,
+    "Hemlik och trygg miljö": <Home className="w-5 h-5" />,
+    "Waldorfpedagogik sedan 1994": <Leaf className="w-5 h-5" />,
   };
 
   return (
-    <section id="hem" className="min-h-screen flex items-center pt-20 relative" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section id="hem" className="min-h-screen gradient-hero flex items-center pt-20">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -20,22 +19,19 @@ const HeroSection = () => {
               <Leaf className="w-4 h-4" />
               <span className="text-sm font-medium">Waldorfpedagogik sedan 1994</span>
             </div>
-            
+
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6 text-balance">
               {siteContent.hero.title}
             </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+
+            <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
               {siteContent.hero.subtitle}
             </p>
 
             {/* Highlights */}
             <div className="flex flex-wrap gap-3 mb-10">
               {siteContent.hero.highlights.map((highlight) => (
-                <div
-                  key={highlight}
-                  className="flex items-center gap-2 bg-card px-4 py-2 rounded-full shadow-soft"
-                >
+                <div key={highlight} className="flex items-center gap-2 bg-card px-4 py-2 rounded-full shadow-soft">
                   <span className="text-coral">{iconMap[highlight]}</span>
                   <span className="text-sm font-medium text-primary">{highlight}</span>
                 </div>
@@ -63,7 +59,7 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
-            
+
             {/* Floating badge */}
             <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-card p-4 md:p-6 rounded-2xl shadow-card animate-float">
               <p className="font-serif text-2xl md:text-3xl font-bold text-coral">30+</p>
