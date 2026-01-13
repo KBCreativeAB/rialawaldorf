@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Leaf, Utensils, Heart, Clock } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
 import foodBg from '@/assets/food-bg.png';
@@ -9,9 +11,35 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const FoodSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+  
+  // Subtle parallax: background moves 20% slower than scroll
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
-    <section id="maten" className="section-padding relative" style={{ backgroundImage: `url(${foodBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="container mx-auto">
+    <section 
+      id="maten" 
+      ref={sectionRef}
+      className="section-padding relative overflow-hidden"
+    >
+      {/* Parallax Background */}
+      <motion.div
+        className="absolute inset-0 -top-[10%] -bottom-[10%] z-0"
+        style={{ y: backgroundY }}
+      >
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${foodBg})` }}
+        />
+      </motion.div>
+
+      {/* Content Container */}
+      <div className="container mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
