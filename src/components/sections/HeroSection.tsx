@@ -1,6 +1,7 @@
 import { Shield, Home, Leaf, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteContent } from '@/data/siteContent';
+import heroBg from '@/assets/hero-bg.png';
 
 const HeroSection = () => {
   const iconMap: Record<string, React.ReactNode> = {
@@ -10,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hem" className="min-h-screen gradient-hero flex items-center pt-20">
+    <section id="hem" className="min-h-screen flex items-center pt-20 relative" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
