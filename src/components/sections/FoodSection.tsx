@@ -1,5 +1,6 @@
 import { Leaf, Utensils, Heart, Clock } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
+import foodBg from '@/assets/food-bg.png';
 
 const iconMap: Record<string, React.ReactNode> = {
   Leaf: <Leaf className="w-6 h-6" />,
@@ -9,7 +10,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const FoodSection = () => {
   return (
-    <section id="maten" className="section-padding">
+    <section id="maten" className="section-padding relative" style={{ backgroundImage: `url(${foodBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
