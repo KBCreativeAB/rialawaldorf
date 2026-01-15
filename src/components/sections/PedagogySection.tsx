@@ -1,11 +1,5 @@
 import { Sun, Heart, Leaf, Users } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
-import gallery1 from '@/assets/gallery-1.jpeg';
-import gallery2 from '@/assets/gallery-2.jpeg';
-import gallery3 from '@/assets/gallery-3.jpeg';
-import gallery4 from '@/assets/gallery-4.jpeg';
-import gallery5 from '@/assets/gallery-5.jpeg';
-import gallery6 from '@/assets/gallery-6.jpeg';
 
 const iconMap: Record<string, React.ReactNode> = {
   Sun: <Sun className="w-8 h-8" />,
@@ -55,46 +49,37 @@ const PedagogySection = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="col-span-2 row-span-2 rounded-3xl overflow-hidden shadow-card">
             <img
-              src={gallery4}
-              alt="Barn som leker utomhus på stockar"
+              src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&h=600&fit=crop"
+              alt="Barn som målar med akvarell"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="rounded-3xl overflow-hidden shadow-soft">
             <img
-              src={gallery1}
-              alt="Torkade blommor på bambufat"
+              src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=400&h=300&fit=crop"
+              alt="Barn utomhus i skogen"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="rounded-3xl overflow-hidden shadow-soft">
             <img
-              src={gallery2}
-              alt="Färgglada garnnystan i korg"
+              src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=400&h=300&fit=crop"
+              alt="Barn som leker med naturmaterial"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="rounded-3xl overflow-hidden shadow-soft">
             <img
-              src={gallery3}
-              alt="Waldorfdockor och leksaker av ull"
+              src="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?w=400&h=300&fit=crop"
+              alt="Kreativt skapande"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="rounded-3xl overflow-hidden shadow-soft">
             <img
-              src={gallery5}
-              alt="Korg med lingon"
+              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=400&h=300&fit=crop"
+              alt="Barn som bygger med trä"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </div>
-        <div className="mt-4 grid grid-cols-2 gap-4">
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={gallery6}
-              alt="Barn som bakar med deg"
-              className="w-full h-full object-cover aspect-[4/3] hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
