@@ -50,17 +50,19 @@ export const siteContent = {
       {
         icon: "Shield",
         title: "Trygghet först",
-        description: "Hos oss utbildas personalen kontinuerligt i Barn HLR (hjärt-lung räddning) för maximal säkerhet.",
+        description: "Hos oss utbildas personalen kontinuerligt i Barn HLR (hjärt-lung räddning) för barnens trygghet.",
       },
       {
         icon: "Home",
         title: "Hemlik atmosfär",
-        description: "Vi strävar efter en hemlik miljö där varje barn känner sig sedd och älskad.",
+        description:
+          "Vi vill ge våra barn en trygg barndom där leken står i centrum och barnen utvecklar sin motoriska förmåga genom daglig utelek",
       },
       {
         icon: "Leaf",
         title: "Nära naturen",
-        description: "Vår förskola ligger mitt i naturen med skog och ängar som vår utelekplats.",
+        description:
+          "Vår förskola ligger mitt i naturen med skog och ängar som vår utelekplats. Vi äter ekologisk, vegetarisk mat som tillagas hos oss.",
       },
     ],
   },
@@ -235,7 +237,7 @@ export const siteContent = {
   },
 
   form: {
-    title: "Kontaktformulär",
+    title: "Intresseanmälan",
     fields: [
       { name: "parentName", label: "Vårdnadshavares namn", type: "text", required: true },
       { name: "email", label: "E-postadress", type: "email", required: true },
