@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Leaf, Utensils, Heart, Clock } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
 import foodBg from '@/assets/food-bg.png';
+import appleSlices from '@/assets/apple-slices.jpeg';
 const iconMap: Record<string, React.ReactNode> = {
   Leaf: <Leaf className="w-6 h-6" />,
   Utensils: <Utensils className="w-6 h-6" />,
@@ -35,7 +36,7 @@ const FoodSection = () => {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden shadow-card">
-              <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=700&h=500&fit=crop" alt="Färska ekologiska grönsaker" className="w-full h-auto object-cover" />
+              <img src={appleSlices} alt="Torkade äppelskivor på träpinnar" className="w-full h-auto object-cover aspect-[4/3]" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-2xl shadow-card">
               <div className="flex items-center gap-3">
