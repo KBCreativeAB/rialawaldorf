@@ -52,8 +52,8 @@ const EnrollmentSection = () => {
             <table className="w-full min-w-[400px]">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="text-left py-4 px-4 font-semibold text-primary">Dag</th>
-                  <th className="text-left py-4 px-4 font-semibold text-primary">Aktiviteter</th>
+                  <th className="text-center py-4 px-4 font-semibold text-primary">Dag</th>
+                  <th className="text-center py-4 px-4 font-semibold text-primary">Aktiviteter</th>
                 </tr>
               </thead>
               <tbody>
@@ -64,8 +64,8 @@ const EnrollmentSection = () => {
                       index % 2 === 0 ? 'bg-card' : ''
                     }`}
                   >
-                    <td className="py-4 px-4 font-medium text-primary">{day.day}</td>
-                    <td className="py-4 px-4 text-muted-foreground">{day.activities}</td>
+                    <td className="py-4 px-4 font-medium text-primary text-center">{day.day}</td>
+                    <td className="py-4 px-4 text-muted-foreground text-center">{day.activities}</td>
                   </tr>
                 ))}
               </tbody>
