@@ -12,7 +12,7 @@ const iconMap: Record<string, React.ReactNode> = {
   MapPin: <MapPin className="w-6 h-6" />,
 };
 
-type FormType = 'interest' | 'damage';
+type FormType = 'interest' | 'complaint';
 
 const ContactSection = () => {
   const [formType, setFormType] = useState<FormType>('interest');
@@ -96,14 +96,14 @@ const ContactSection = () => {
               </button>
               <button
                 type="button"
-                onClick={() => { setFormType('damage'); setIsSubmitted(false); }}
+                onClick={() => { setFormType('complaint'); setIsSubmitted(false); }}
                 className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
-                  formType === 'damage'
+                  formType === 'complaint'
                     ? 'bg-background text-primary shadow-sm'
                     : 'text-muted-foreground hover:text-primary'
                 }`}
               >
-                Skadeanmälan
+                Klagomål
               </button>
             </div>
 
@@ -113,7 +113,7 @@ const ContactSection = () => {
                   <CheckCircle className="w-8 h-8 text-coral" />
                 </div>
                 <h4 className="font-serif text-xl font-semibold mb-2">
-                  {formType === 'interest' ? 'Tack för din anmälan!' : 'Tack för din skadeanmälan!'}
+                  {formType === 'interest' ? 'Tack för din anmälan!' : 'Tack för ditt klagomål!'}
                 </h4>
                 <p className="text-muted-foreground">Vi återkommer till dig så snart som möjligt.</p>
               </div>
@@ -247,50 +247,27 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="damagePhone">Telefon *</Label>
-                    <Input
-                      id="damagePhone"
-                      name="damagePhone"
-                      type="tel"
-                      required
-                      className="rounded-xl"
-                      placeholder="070 123 45 67"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="damageDate">Datum för skadan *</Label>
-                    <Input
-                      id="damageDate"
-                      name="damageDate"
-                      type="date"
-                      required
-                      className="rounded-xl"
-                    />
-                  </div>
-                </div>
-
                 <div className="space-y-2">
-                  <Label htmlFor="damageLocation">Plats för skadan *</Label>
+                  <Label htmlFor="complaintPhone">Telefon *</Label>
                   <Input
-                    id="damageLocation"
-                    name="damageLocation"
+                    id="complaintPhone"
+                    name="complaintPhone"
+                    type="tel"
                     required
                     className="rounded-xl"
-                    placeholder="T.ex. lekplatsen, inomhus, köket..."
+                    placeholder="070 123 45 67"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="damageDescription">Beskrivning av skadan *</Label>
+                  <Label htmlFor="complaintDescription">Beskriv ditt klagomål *</Label>
                   <Textarea
-                    id="damageDescription"
-                    name="damageDescription"
+                    id="complaintDescription"
+                    name="complaintDescription"
                     rows={4}
                     required
                     className="rounded-xl resize-none"
-                    placeholder="Beskriv vad som hände och vilken skada som uppstod..."
+                    placeholder="Beskriv vad klagomålet gäller..."
                   />
                 </div>
 
@@ -309,7 +286,7 @@ const ContactSection = () => {
                   ) : (
                     <span className="flex items-center gap-2">
                       <Send className="w-4 h-4" />
-                      Skicka skadeanmälan
+                      Skicka klagomål
                     </span>
                   )}
                 </Button>
