@@ -4,6 +4,7 @@ import { Shield, Home, Leaf, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
 import heroBg from "@/assets/hero-bg.png";
+import preschoolBuilding from "@/assets/preschool-building.jpeg";
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -69,9 +70,9 @@ const HeroSection = () => {
           <div className="relative animate-fade-in">
             <div className="relative rounded-3xl overflow-hidden shadow-card">
               <img
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop"
-                alt="Barn som leker utomhus i naturen"
-                className="w-full h-auto object-cover aspect-[4/3]"
+                src={preschoolBuilding}
+                alt="Riala Waldorfförskola - röd stuga med trädgård"
+                className="w-full h-auto object-cover object-center aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
