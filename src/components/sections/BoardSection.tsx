@@ -1,5 +1,6 @@
 import { Users } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
+import berryBasket from '@/assets/berry-basket.jpeg';
 
 const BoardSection = () => {
   return (
@@ -36,9 +37,9 @@ const BoardSection = () => {
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-3xl overflow-hidden shadow-card">
             <img
-              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&h=500&fit=crop"
-              alt="Förskolebyggnad omgiven av natur"
-              className="w-full h-auto object-cover"
+              src={berryBasket}
+              alt="Korg med lingon plockade i naturen"
+              className="w-full h-auto object-cover aspect-[4/3]"
             />
           </div>
           <div>
