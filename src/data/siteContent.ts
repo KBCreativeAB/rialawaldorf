@@ -127,7 +127,7 @@ export const siteContent = {
   enrollment: {
     title: "Inskolning",
     intro:
-      "Inskolningen brukar vara 2 veckor. I början ses vi små korta stunder, så att barnet inte tröttnar. Som vårdnadshavare ska man vara ”passiv” på förskolan, alltså inte vara med i barnets verksamhet. Vårdnadshavarna får till uppgift att göra något i köket t.ex. skala morötter eller sy barnets tygservett. Barnet tar sig till personalen och barngruppen och därför är det bra om vårdnadshavaren är ”tråkig”. De första dagarna ses vi 1 timme, sen utökar vi beroende på hur vi tillsammans tycker att det fungerar.",
+      "Inskolningen är en viktig period som lägger grunden för barnets trygghet hos oss. Vi tar god tid på oss för att varje barn ska känna sig hemma.",
     duration: "2 veckor",
     steps: [
       {
@@ -153,7 +153,7 @@ export const siteContent = {
       },
     ],
     schedule: {
-      title: "Förslag på veckoschema för inskolning",
+      title: "Veckoschema",
       days: [
         { day: "Måndag", theme: "Målning", activities: "Akvarellmålning, fri lek, utevistelse" },
         { day: "Tisdag", theme: "Bakning", activities: "Vi bakar bröd, sagoberättande, sång" },
@@ -235,7 +235,7 @@ export const siteContent = {
   },
 
   form: {
-    title: "Intresseanmälan",
+    title: "Kontaktformulär",
     fields: [
       { name: "parentName", label: "Vårdnadshavares namn", type: "text", required: true },
       { name: "email", label: "E-postadress", type: "email", required: true },
