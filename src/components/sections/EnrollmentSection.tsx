@@ -1,4 +1,4 @@
-import { Calendar, CheckCircle } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
 
 const EnrollmentSection = () => {
@@ -49,11 +49,10 @@ const EnrollmentSection = () => {
             {siteContent.enrollment.schedule.title}
           </h3>
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px]">
+            <table className="w-full min-w-[400px]">
               <thead>
                 <tr className="border-b border-border">
                   <th className="text-left py-4 px-4 font-semibold text-primary">Dag</th>
-                  <th className="text-left py-4 px-4 font-semibold text-primary">Tema</th>
                   <th className="text-left py-4 px-4 font-semibold text-primary">Aktiviteter</th>
                 </tr>
               </thead>
@@ -66,12 +65,6 @@ const EnrollmentSection = () => {
                     }`}
                   >
                     <td className="py-4 px-4 font-medium text-primary">{day.day}</td>
-                    <td className="py-4 px-4">
-                      <span className="inline-flex items-center gap-2 bg-secondary/50 text-primary px-3 py-1 rounded-full text-sm">
-                        <CheckCircle className="w-4 h-4 text-coral" />
-                        {day.theme}
-                      </span>
-                    </td>
                     <td className="py-4 px-4 text-muted-foreground">{day.activities}</td>
                   </tr>
                 ))}
