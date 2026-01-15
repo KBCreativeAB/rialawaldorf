@@ -155,11 +155,11 @@ export const siteContent = {
     schedule: {
       title: "Veckoschema",
       days: [
-        { day: "Måndag", theme: "Målning", activities: "Akvarellmålning, fri lek, utevistelse" },
-        { day: "Tisdag", theme: "Bakning", activities: "Vi bakar bröd, sagoberättande, sång" },
-        { day: "Onsdag", theme: "Eurytmi", activities: "Rörelse och rytm, skogspromenad" },
-        { day: "Torsdag", theme: "Modellering", activities: "Bivax och lera, hantverk" },
-        { day: "Fredag", theme: "Städdag", activities: "Vi tar hand om vårt hem, veckosaga" },
+        { day: "Måndag", theme: "Målning", activities: "kl. 10.00-11.00 ute" },
+        { day: "Tisdag", theme: "Bakning", activities: "kl. 10.00-11.00 ute" },
+        { day: "Onsdag", theme: "Eurytmi", activities: "kl. 9.30-10.30 inne med samling sedan utelek" },
+        { day: "Torsdag", theme: "Modellering", activities: "kl. 9.00-10.30" },
+        { day: "Fredag", theme: "Städdag", activities: "kl. 9.00-11.00" },
       ],
     },
   },
