@@ -127,7 +127,7 @@ export const siteContent = {
   enrollment: {
     title: "Inskolning",
     intro:
-      "Inskolningen är en viktig period som lägger grunden för barnets trygghet hos oss. Vi tar god tid på oss för att varje barn ska känna sig hemma.",
+      "Inskolningen brukar vara 2 veckor. I början ses vi små korta stunder, så att barnet inte tröttnar. Som vårdnadshavare ska man vara ”passiv” på förskolan, alltså inte vara med i barnets verksamhet. Vårdnadshavarna får till uppgift att göra något i köket t.ex. skala morötter eller sy barnets tygservett. Barnet tar sig till personalen och barngruppen och därför är det bra om vårdnadshavaren är ”tråkig”. De första dagarna ses vi 1 timme, sen utökar vi beroende på hur vi tillsammans tycker att det fungerar.",
     duration: "2 veckor",
     steps: [
       {
@@ -153,13 +153,13 @@ export const siteContent = {
       },
     ],
     schedule: {
-      title: "Veckoschema",
+      title: "Förslag på veckoschema för inskolning",
       days: [
-        { day: "Måndag", theme: "Målning", activities: "kl. 10.00-11.00 ute" },
-        { day: "Tisdag", theme: "Bakning", activities: "kl. 10.00-11.00 ute" },
-        { day: "Onsdag", theme: "Eurytmi", activities: "kl. 9.30-10.30 inne med samling sedan utelek" },
-        { day: "Torsdag", theme: "Modellering", activities: "kl. 9.00-10.30" },
-        { day: "Fredag", theme: "Städdag", activities: "kl. 9.00-11.00" },
+        { day: "Måndag", theme: "Målning", activities: "Akvarellmålning, fri lek, utevistelse" },
+        { day: "Tisdag", theme: "Bakning", activities: "Vi bakar bröd, sagoberättande, sång" },
+        { day: "Onsdag", theme: "Eurytmi", activities: "Rörelse och rytm, skogspromenad" },
+        { day: "Torsdag", theme: "Modellering", activities: "Bivax och lera, hantverk" },
+        { day: "Fredag", theme: "Städdag", activities: "Vi tar hand om vårt hem, veckosaga" },
       ],
     },
   },
