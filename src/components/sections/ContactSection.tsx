@@ -12,7 +12,10 @@ const iconMap: Record<string, React.ReactNode> = {
   MapPin: <MapPin className="w-6 h-6" />,
 };
 
+type FormType = 'interest' | 'damage';
+
 const ContactSection = () => {
+  const [formType, setFormType] = useState<FormType>('interest');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -78,15 +81,43 @@ const ContactSection = () => {
               {siteContent.form.title}
             </h3>
 
+            {/* Form Type Toggle */}
+            <div className="flex rounded-xl bg-secondary/50 p-1 mb-6">
+              <button
+                type="button"
+                onClick={() => { setFormType('interest'); setIsSubmitted(false); }}
+                className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  formType === 'interest'
+                    ? 'bg-background text-primary shadow-sm'
+                    : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                Intresseanmälan
+              </button>
+              <button
+                type="button"
+                onClick={() => { setFormType('damage'); setIsSubmitted(false); }}
+                className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  formType === 'damage'
+                    ? 'bg-background text-primary shadow-sm'
+                    : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                Skadeanmälan
+              </button>
+            </div>
+
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-8 h-8 text-coral" />
                 </div>
-                <h4 className="font-serif text-xl font-semibold mb-2">Tack för din anmälan!</h4>
+                <h4 className="font-serif text-xl font-semibold mb-2">
+                  {formType === 'interest' ? 'Tack för din anmälan!' : 'Tack för din skadeanmälan!'}
+                </h4>
                 <p className="text-muted-foreground">Vi återkommer till dig så snart som möjligt.</p>
               </div>
-            ) : (
+            ) : formType === 'interest' ? (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -186,6 +217,99 @@ const ContactSection = () => {
                     <span className="flex items-center gap-2">
                       <Send className="w-4 h-4" />
                       {siteContent.form.submitText}
+                    </span>
+                  )}
+                </Button>
+              </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="reporterName">Ditt namn *</Label>
+                    <Input
+                      id="reporterName"
+                      name="reporterName"
+                      required
+                      className="rounded-xl"
+                      placeholder="Ditt namn"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="damageEmail">E-postadress *</Label>
+                    <Input
+                      id="damageEmail"
+                      name="damageEmail"
+                      type="email"
+                      required
+                      className="rounded-xl"
+                      placeholder="din@email.se"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="damagePhone">Telefon *</Label>
+                    <Input
+                      id="damagePhone"
+                      name="damagePhone"
+                      type="tel"
+                      required
+                      className="rounded-xl"
+                      placeholder="070 123 45 67"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="damageDate">Datum för skadan *</Label>
+                    <Input
+                      id="damageDate"
+                      name="damageDate"
+                      type="date"
+                      required
+                      className="rounded-xl"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="damageLocation">Plats för skadan *</Label>
+                  <Input
+                    id="damageLocation"
+                    name="damageLocation"
+                    required
+                    className="rounded-xl"
+                    placeholder="T.ex. lekplatsen, inomhus, köket..."
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="damageDescription">Beskrivning av skadan *</Label>
+                  <Textarea
+                    id="damageDescription"
+                    name="damageDescription"
+                    rows={4}
+                    required
+                    className="rounded-xl resize-none"
+                    placeholder="Beskriv vad som hände och vilken skada som uppstod..."
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  variant="cta"
+                  size="lg"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <span className="w-4 h-4 border-2 border-cta-foreground/30 border-t-cta-foreground rounded-full animate-spin" />
+                      Skickar...
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      <Send className="w-4 h-4" />
+                      Skicka skadeanmälan
                     </span>
                   )}
                 </Button>
