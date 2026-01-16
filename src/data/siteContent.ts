@@ -172,7 +172,7 @@ export const siteContent = {
     members: [
       {
         name: "Katja",
-        role: "Ordförande",
+        role: "Tillförordnad rektor/Ordförande",
         description: "Ansvarar för styrelsens arbete och samordning.",
       },
       {
