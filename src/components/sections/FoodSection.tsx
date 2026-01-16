@@ -44,8 +44,8 @@ const FoodSection = () => {
                   <Leaf className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary">100%</p>
-                  <p className="text-sm text-muted-foreground">Ekologiskt</p>
+                  <p className="font-semibold text-primary">Nylagat</p>
+                  <p className="text-sm text-muted-foreground">i eget kök</p>
                 </div>
               </div>
             </div>
