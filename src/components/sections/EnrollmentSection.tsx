@@ -50,12 +50,10 @@ const EnrollmentSection = () => {
           </h3>
         {/* Mobile: Cards */}
         <div className="md:hidden space-y-3">
-          {siteContent.enrollment.schedule.days.map((day, index) => (
+          {siteContent.enrollment.schedule.days.map((day) => (
             <div
               key={day.day}
-              className={`p-4 rounded-2xl border border-border/50 ${
-                index % 2 === 0 ? 'bg-card' : 'bg-background'
-              }`}
+              className="p-4 rounded-2xl border border-border/50 bg-background"
             >
               <div className="font-semibold text-primary mb-2">{day.day}</div>
               <div className="text-sm text-muted-foreground">{day.activities}</div>
