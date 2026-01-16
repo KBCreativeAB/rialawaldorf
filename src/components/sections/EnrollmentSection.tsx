@@ -48,29 +48,45 @@ const EnrollmentSection = () => {
           <h3 className="font-serif text-2xl font-bold mb-6 text-center">
             {siteContent.enrollment.schedule.title}
           </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[400px]">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-center py-4 px-4 font-semibold text-primary">Dag</th>
-                  <th className="text-center py-4 px-4 font-semibold text-primary">Aktiviteter</th>
+        {/* Mobile: Cards */}
+        <div className="md:hidden space-y-3">
+          {siteContent.enrollment.schedule.days.map((day, index) => (
+            <div
+              key={day.day}
+              className={`p-4 rounded-2xl border border-border/50 ${
+                index % 2 === 0 ? 'bg-card' : 'bg-background'
+              }`}
+            >
+              <div className="font-semibold text-primary mb-2">{day.day}</div>
+              <div className="text-sm text-muted-foreground">{day.activities}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Table */}
+        <div className="hidden md:block overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-center py-4 px-4 font-semibold text-primary">Dag</th>
+                <th className="text-center py-4 px-4 font-semibold text-primary">Aktiviteter</th>
+              </tr>
+            </thead>
+            <tbody>
+              {siteContent.enrollment.schedule.days.map((day, index) => (
+                <tr
+                  key={day.day}
+                  className={`border-b border-border/50 hover:bg-secondary/20 transition-colors ${
+                    index % 2 === 0 ? 'bg-card' : ''
+                  }`}
+                >
+                  <td className="py-4 px-4 font-medium text-primary text-center">{day.day}</td>
+                  <td className="py-4 px-4 text-muted-foreground text-center">{day.activities}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {siteContent.enrollment.schedule.days.map((day, index) => (
-                  <tr
-                    key={day.day}
-                    className={`border-b border-border/50 hover:bg-secondary/20 transition-colors ${
-                      index % 2 === 0 ? 'bg-card' : ''
-                    }`}
-                  >
-                    <td className="py-4 px-4 font-medium text-primary text-center">{day.day}</td>
-                    <td className="py-4 px-4 text-muted-foreground text-center">{day.activities}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
+        </div>
         </div>
       </div>
     </section>
