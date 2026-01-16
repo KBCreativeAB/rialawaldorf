@@ -26,11 +26,11 @@ export const siteContent = {
 
   navigation: [
     { label: "Hem", href: "#hem" },
-    { label: "Verksamheten", href: "#verksamheten" },
     { label: "Maten", href: "#maten" },
     { label: "Inskolning", href: "#inskolning" },
     { label: "Om oss", href: "#om-oss" },
     { label: "Praktiskt", href: "#praktiskt" },
+    { label: "Galleri", href: "#galleri" },
     { label: "Kontakt", href: "#kontakt" },
   ],
 
