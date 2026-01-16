@@ -53,7 +53,7 @@ const EnrollmentSection = () => {
           {siteContent.enrollment.schedule.days.map((day) => (
             <div
               key={day.day}
-              className="p-4 rounded-2xl border border-border/50 bg-background"
+              className="p-4 rounded-2xl border border-border/50 bg-card"
             >
               <div className="font-semibold text-primary mb-2">{day.day}</div>
               <div className="text-sm text-muted-foreground">{day.activities}</div>
