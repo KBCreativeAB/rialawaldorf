@@ -6,6 +6,7 @@ import FoodSection from '@/components/sections/FoodSection';
 import EnrollmentSection from '@/components/sections/EnrollmentSection';
 import BoardSection from '@/components/sections/BoardSection';
 import PracticalSection from '@/components/sections/PracticalSection';
+import GallerySection from '@/components/sections/GallerySection';
 import ContactSection from '@/components/sections/ContactSection';
 import FloatingCTA from '@/components/FloatingCTA';
 
@@ -20,6 +21,7 @@ const Index = () => {
         <EnrollmentSection />
         <BoardSection />
         <PracticalSection />
+        <GallerySection />
         <ContactSection />
       </main>
       <Footer />

@@ -1,10 +1,5 @@
 import { Sun, Heart, Leaf, Users } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
-import outdoorPlay from '@/assets/outdoor-play.jpeg';
-import yarnBasket from '@/assets/yarn-basket.jpeg';
-import woolScene from '@/assets/wool-scene.jpeg';
-import doughKneading from '@/assets/dough-kneading.jpeg';
-import flowerPetals from '@/assets/flower-petals.jpeg';
 
 const iconMap: Record<string, React.ReactNode> = {
   Sun: <Sun className="w-8 h-8" />,
@@ -48,45 +43,6 @@ const PedagogySection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Image gallery */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="col-span-2 row-span-2 rounded-3xl overflow-hidden shadow-card">
-            <img
-              src={outdoorPlay}
-              alt="Barn som leker utomhus på stockar"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={yarnBasket}
-              alt="Korg med färgglada garnnystan"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={woolScene}
-              alt="Kreativt skapande med ull och naturmaterial"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={doughKneading}
-              alt="Barnhänder som knådar deg"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={flowerPetals}
-              alt="Torkade blommor på flätade korgar"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
         </div>
       </div>
     </section>
