@@ -39,7 +39,7 @@ const ContactSection = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Info */}
-          <div>
+          <div className="text-center lg:text-left">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               {siteContent.contact.title}
             </h2>
@@ -51,7 +51,7 @@ const ContactSection = () => {
               {siteContent.contact.methods.map((method) => (
                 <div
                   key={method.label}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-card hover:bg-secondary/30 transition-colors"
+                  className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-4 p-4 rounded-2xl bg-card hover:bg-secondary/30 transition-colors"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/50 flex items-center justify-center text-coral">
                     {iconMap[method.icon]}
