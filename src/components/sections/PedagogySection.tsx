@@ -28,7 +28,7 @@ const PedagogySection = () => {
               className="group p-6 md:p-8 rounded-3xl bg-background hover:bg-secondary/30 transition-all duration-300 border border-border hover:border-secondary hover:shadow-card"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
                 <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-secondary/50 flex items-center justify-center text-coral group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
                   {iconMap[section.icon]}
                 </div>
