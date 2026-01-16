@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Kontakt</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4 text-white">Kontakt</h3>
             <div className="space-y-3">
               <a
                 href={`tel:${siteContent.meta.phone.replace(/-/g, '')}`}
@@ -48,7 +48,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Snabblänkar</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4 text-white">Snabblänkar</h3>
             <div className="space-y-2">
               {siteContent.navigation.slice(0, 5).map((item) => (
                 <a
