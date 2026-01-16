@@ -12,26 +12,19 @@ import galleryPainting from '@/assets/gallery-painting.jpeg';
 import galleryHandsWool from '@/assets/gallery-hands-wool.jpeg';
 
 const galleryImages = [
-  { src: outdoorPlay, alt: 'Barn som leker utomhus på stockar', size: 'large' },
-  { src: yarnBasket, alt: 'Korg med färgglada garnnystan', size: 'small' },
-  { src: woolScene, alt: 'Kreativt skapande med ull och naturmaterial', size: 'tall' },
-  { src: doughKneading, alt: 'Barnhänder som knådar deg', size: 'small' },
-  { src: flowerPetals, alt: 'Torkade blommor på flätade korgar', size: 'wide' },
-  { src: galleryFoodPlate, alt: 'Hemlagad lunch med grönsaker', size: 'small' },
-  { src: galleryCarrots, alt: 'Nypplockade morötter på höstlöv', size: 'tall' },
-  { src: galleryGrating, alt: 'Barn river morötter', size: 'small' },
-  { src: galleryArtwork, alt: 'Årshjul med barnens aktiviteter', size: 'large' },
-  { src: galleryLeafCrown, alt: 'Lövkrona gjord av höstlöv', size: 'small' },
-  { src: galleryPainting, alt: 'Barn målar med vattenfärger', size: 'wide' },
-  { src: galleryHandsWool, alt: 'Barn tovar ull tillsammans', size: 'small' },
+  { src: outdoorPlay, alt: 'Barn som leker utomhus på stockar' },
+  { src: yarnBasket, alt: 'Korg med färgglada garnnystan' },
+  { src: woolScene, alt: 'Kreativt skapande med ull och naturmaterial' },
+  { src: doughKneading, alt: 'Barnhänder som knådar deg' },
+  { src: flowerPetals, alt: 'Torkade blommor på flätade korgar' },
+  { src: galleryFoodPlate, alt: 'Hemlagad lunch med grönsaker' },
+  { src: galleryCarrots, alt: 'Nypplockade morötter på höstlöv' },
+  { src: galleryGrating, alt: 'Barn river morötter' },
+  { src: galleryArtwork, alt: 'Årshjul med barnens aktiviteter' },
+  { src: galleryLeafCrown, alt: 'Lövkrona gjord av höstlöv' },
+  { src: galleryPainting, alt: 'Barn målar med vattenfärger' },
+  { src: galleryHandsWool, alt: 'Barn tovar ull tillsammans' },
 ];
-
-const sizeClasses: Record<string, string> = {
-  small: 'col-span-1 row-span-1 aspect-square',
-  large: 'col-span-2 row-span-2 aspect-square',
-  tall: 'col-span-1 row-span-2 aspect-[3/4]',
-  wide: 'col-span-2 row-span-1 aspect-[16/9]',
-};
 
 const GallerySection = () => {
   return (
@@ -43,18 +36,19 @@ const GallerySection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[200px] gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className={`group relative rounded-2xl overflow-hidden shadow-soft ${sizeClasses[image.size]} hover:shadow-card transition-shadow duration-300`}
+              className={`rounded-2xl overflow-hidden shadow-soft ${
+                index === 0 ? 'col-span-2 row-span-2' : ''
+              }`}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
