@@ -10,6 +10,7 @@ import galleryArtwork from '@/assets/gallery-artwork.jpeg';
 import galleryLeafCrown from '@/assets/gallery-leaf-crown.jpeg';
 import galleryPainting from '@/assets/gallery-painting.jpeg';
 import galleryHandsWool from '@/assets/gallery-hands-wool.jpeg';
+import galleryPlanting from '@/assets/gallery-planting.jpeg';
 
 const galleryImages = [
   { src: outdoorPlay, alt: 'Barn som leker utomhus på stockar' },
@@ -24,6 +25,7 @@ const galleryImages = [
   { src: galleryLeafCrown, alt: 'Lövkrona gjord av höstlöv' },
   { src: galleryPainting, alt: 'Barn målar med vattenfärger' },
   { src: galleryHandsWool, alt: 'Barn tovar ull tillsammans' },
+  { src: galleryPlanting, alt: 'Barn planterar frön i jorden' },
 ];
 
 const GallerySection = () => {
