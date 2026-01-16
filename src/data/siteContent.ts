@@ -242,7 +242,7 @@ export const siteContent = {
   },
 
   form: {
-    title: "Intresseanmälan",
+    title: "Kontaktformulär",
     fields: [
       { name: "parentName", label: "Vårdnadshavares namn", type: "text", required: true },
       { name: "email", label: "E-postadress", type: "email", required: true },
