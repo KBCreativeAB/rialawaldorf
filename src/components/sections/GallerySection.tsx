@@ -30,7 +30,7 @@ const galleryImages = [
 
 const GallerySection = () => {
   return (
-    <section id="galleri" className="section-padding pb-8 md:pb-24 bg-background">
+    <section id="galleri" className="section-padding pb-4 md:pb-24 bg-background">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
