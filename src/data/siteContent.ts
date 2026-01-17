@@ -171,7 +171,7 @@ export const siteContent = {
     intro: "Riala Waldorfförskola drivs som en föräldrakooperativ förening. Styrelsen består av engagerade föräldrar.",
     members: [
       {
-        name: "Katja",
+        name: "Katja Lundberg",
         role: "Tillförordnad rektor/Ordförande",
         description: "Ansvarar för styrelsens arbete och samordning.",
       },
