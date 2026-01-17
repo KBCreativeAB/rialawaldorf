@@ -32,7 +32,7 @@ const FoodSection = () => {
 
       {/* Content Container */}
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden shadow-card">
