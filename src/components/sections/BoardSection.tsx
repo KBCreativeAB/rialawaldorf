@@ -6,7 +6,7 @@ const BoardSection = () => {
   return (
     <section id="om-oss" className="section-padding">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             {siteContent.board.title}
           </h2>
@@ -15,11 +15,11 @@ const BoardSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 max-w-6xl mx-auto">
           {siteContent.board.members.map((member, index) => (
             <div
               key={member.name}
-              className="text-center p-6 md:p-8 rounded-3xl bg-card hover:shadow-card transition-all group"
+              className="flex flex-col items-center justify-center text-center p-6 md:p-8 rounded-3xl bg-card hover:shadow-card transition-all group"
             >
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-secondary group-hover:scale-110 transition-all">
                 <Users className="w-10 h-10 text-primary" />
