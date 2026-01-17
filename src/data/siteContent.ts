@@ -37,7 +37,7 @@ export const siteContent = {
   hero: {
     title: "Välkommen till Riala Waldorfförskola",
     subtitle: "En trygg och kärleksfull miljö där barn får växa i sin egen takt sedan 1994",
-    highlights: ["Personal utbildad i Barn-HLR", "Hemlik och trygg miljö"],
+    highlights: ["Personal utbildad i Barn-HLR", "Hemlik och trygg miljö", "Vegetarisk mat", "Waldorfpedagogik"],
     ctaText: "Intresseanmälan",
     secondaryCtaText: "Läs mer",
   },
