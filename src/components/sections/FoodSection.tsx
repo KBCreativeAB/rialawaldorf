@@ -52,7 +52,7 @@ const FoodSection = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 mx-[80px] px-0">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               {siteContent.food.title}
             </h2>
