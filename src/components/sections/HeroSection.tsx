@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Shield, Home, Leaf, ArrowDown } from "lucide-react";
+import { Shield, Home, Leaf, ArrowDown, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
 import heroBg from "@/assets/hero-bg.png";
@@ -15,6 +15,8 @@ const HeroSection = () => {
   const iconMap: Record<string, React.ReactNode> = {
     "Personal utbildad i Barn-HLR": <Shield className="w-5 h-5" />,
     "Hemlik och trygg miljö": <Home className="w-5 h-5" />,
+    "Waldorfpedagogik": <GraduationCap className="w-5 h-5" />,
+    "Vegetarisk mat": <Leaf className="w-5 h-5" />,
   };
   return (
     <section id="hem" ref={sectionRef} className="min-h-screen flex items-center pt-20 relative overflow-hidden">
