@@ -10,13 +10,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm shadow-soft">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <a href="#hem" className="flex items-center gap-3">
             <img 
               src={rialaLogo} 
               alt="Riala Waldorfförskola logotyp" 
-              className="h-12 md:h-14 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
             <span className="font-serif font-semibold text-primary text-lg md:text-xl hidden sm:block">
               Riala Waldorf
