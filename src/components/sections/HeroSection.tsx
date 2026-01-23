@@ -27,11 +27,14 @@ const HeroSection = () => {
           y: backgroundY,
         }}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-          }}
+        <img
+          src={heroBg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          aria-hidden="true"
         />
       </motion.div>
 
@@ -75,6 +78,9 @@ const HeroSection = () => {
                 src={preschoolBuilding}
                 alt="Riala Waldorfförskola - röd stuga med trädgård"
                 className="w-full h-auto object-cover object-center aspect-[4/3]"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
