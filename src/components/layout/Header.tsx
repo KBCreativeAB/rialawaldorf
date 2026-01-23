@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteContent } from '@/data/siteContent';
+import rialaLogo from '@/assets/riala-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#hem" className="flex items-center gap-2">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary flex items-center justify-center">
-              <span className="font-serif font-bold text-primary text-lg md:text-xl">R</span>
-            </div>
+          <a href="#hem" className="flex items-center gap-3">
+            <img 
+              src={rialaLogo} 
+              alt="Riala Waldorfförskola logotyp" 
+              className="h-12 md:h-14 w-auto"
+            />
             <span className="font-serif font-semibold text-primary text-lg md:text-xl hidden sm:block">
               Riala Waldorf
             </span>
