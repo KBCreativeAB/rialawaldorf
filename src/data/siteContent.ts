@@ -159,7 +159,7 @@ export const siteContent = {
       days: [
         { day: "Måndag", theme: "Målning", activities: " kl. 10.00-11.00 ute" },
         { day: "Tisdag", theme: "Bakning", activities: "kl. 10.00-11.00 ute" },
-        { day: "Onsdag", theme: "Eurytmi", activities: "kl. 9.30-10.30 inne med samling sedan utelek" },
+        { day: "Onsdag", theme: "Eurytmi", activities: "kl. 9.30-10.30 inne, sedan utelek" },
         { day: "Torsdag", theme: "Modellering", activities: "kl. 9.00-10.30" },
         { day: "Fredag", theme: "Städdag", activities: "kl. 9.00-11.00" },
       ],
