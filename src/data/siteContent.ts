@@ -205,7 +205,7 @@ export const siteContent = {
       {
         id: "oppettider",
         title: "Öppettider",
-        content: "Förskolan är öppen måndag-fredag kl. 7:00-17:00. Vi följer Norrtälje kommuns lovschema.",
+        content: "Förskolan är öppen måndag-fredag kl. 6:00-18:00. Vi följer Norrtälje kommuns lovschema.",
       },
       {
         id: "klagomal",
