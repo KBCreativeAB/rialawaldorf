@@ -44,7 +44,7 @@ const EnrollmentSection = () => {
         </div>
 
         {/* Weekly Schedule */}
-        <div className="bg-background rounded-3xl p-6 md:p-8 shadow-soft">
+        <div className="bg-background rounded-3xl p-6 md:p-8 shadow-soft max-w-2xl mx-auto">
           <h3 className="font-serif text-2xl font-bold mb-6 text-center">
             {siteContent.enrollment.schedule.title}
           </h3>
