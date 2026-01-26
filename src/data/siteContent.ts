@@ -201,7 +201,7 @@ export const siteContent = {
         id: "hitta-hit",
         title: "Hitta hit",
         content:
-          "Riala Waldorfförskola ligger i hjärtat av Riala, en liten ort i Norrtälje kommun. Vi har goda parkeringsmöjligheter och ligger nära naturen.",
+          "Riala Waldorfförskola ligger i hjärtat av Riala, en liten ort i Norrtälje kommun. Vi ligger nära naturen, men notera att vi har begränsade parkeringsmöjligheter",
       },
       {
         id: "oppettider",
