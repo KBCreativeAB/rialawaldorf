@@ -1,5 +1,6 @@
 import { Heart, Phone, MapPin } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
+import logo from '@/assets/riala-logo.png';
 
 const Footer = () => {
   return (
@@ -9,9 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                <span className="font-serif font-bold text-primary text-xl">R</span>
-              </div>
+              <img src={logo} alt="Riala Waldorfförskola" className="h-12 w-auto" />
               <span className="font-serif font-semibold text-xl">
                 Riala Waldorfförskola
               </span>
