@@ -62,8 +62,8 @@ const EnrollmentSection = () => {
         </div>
 
         {/* Desktop: Table */}
-        <div className="hidden md:flex justify-center overflow-x-auto">
-          <table className="w-auto">
+        <div className="hidden md:block overflow-x-auto">
+          <table className="w-full">
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left py-4 px-6 font-semibold text-primary">Dag</th>
