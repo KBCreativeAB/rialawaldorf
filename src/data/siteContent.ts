@@ -86,7 +86,7 @@ export const siteContent = {
       },
       {
         icon: "Leaf",
-        title: "Naturen som klassrum",
+        title: "Naturen som läromiljö",
         description:
           "Vi tillbringar mycket tid utomhus oavsett väder. Naturen erbjuder oändliga möjligheter till utforskande och lärande.",
       },
