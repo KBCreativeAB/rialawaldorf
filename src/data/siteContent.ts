@@ -181,7 +181,7 @@ export const siteContent = {
         description: "Aktiv i föreningens dagliga arbete.",
       },
       {
-        name: "Ann Ollsson",
+        name: "Sanna Olsson",
         role: "Ledamot",
         description: "Bidrar med engagemang och erfarenhet.",
       },
