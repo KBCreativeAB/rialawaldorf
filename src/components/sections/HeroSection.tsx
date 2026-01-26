@@ -94,7 +94,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="hidden lg:flex justify-center absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="hidden lg:flex justify-center mt-16">
           <a
             href="#verksamheten"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
