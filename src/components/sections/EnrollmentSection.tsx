@@ -62,12 +62,12 @@ const EnrollmentSection = () => {
         </div>
 
         {/* Desktop: Table */}
-        <div className="hidden md:block overflow-x-auto">
-          <table className="w-full">
+        <div className="hidden md:flex justify-center overflow-x-auto">
+          <table className="w-auto">
             <thead>
               <tr className="border-b border-border">
-                <th className="text-center py-4 px-4 font-semibold text-primary">Dag</th>
-                <th className="text-center py-4 px-4 font-semibold text-primary">Aktiviteter</th>
+                <th className="text-left py-4 px-6 font-semibold text-primary">Dag</th>
+                <th className="text-left py-4 px-6 font-semibold text-primary">Aktiviteter</th>
               </tr>
             </thead>
             <tbody>
@@ -78,8 +78,8 @@ const EnrollmentSection = () => {
                     index % 2 === 0 ? 'bg-card' : ''
                   }`}
                 >
-                  <td className="py-4 px-4 font-medium text-primary text-center">{day.day}</td>
-                  <td className="py-4 px-4 text-muted-foreground text-center">{day.activities}</td>
+                  <td className="py-4 px-6 font-medium text-primary text-left">{day.day}</td>
+                  <td className="py-4 px-6 text-muted-foreground text-left">{day.activities}</td>
                 </tr>
               ))}
             </tbody>
