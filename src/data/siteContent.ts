@@ -168,7 +168,8 @@ export const siteContent = {
 
   board: {
     title: "Styrelsen",
-    intro: "Riala Waldorfförskola drivs som ett personalkooperativ. Styrelsen består av engagerad personal och föräldrar.",
+    intro:
+      "Riala Waldorfförskola drivs som ett personalkooperativ. Styrelsen består av engagerad personal och föräldrar.",
     members: [
       {
         name: "Katja Lundberg",
@@ -181,7 +182,7 @@ export const siteContent = {
         description: "Aktiv i föreningens dagliga arbete.",
       },
       {
-        name: "Ann" Olsson",
+        name: "Ann Olsson",
         role: "Ledamot",
         description: "Bidrar med engagemang och erfarenhet.",
       },
