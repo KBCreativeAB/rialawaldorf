@@ -15,7 +15,7 @@ const BoardSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 lg:gap-4 max-w-6xl mx-auto">
           {siteContent.board.members.map((member, index) => (
             <div
               key={member.name}
