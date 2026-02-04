@@ -155,7 +155,7 @@ export const siteContent = {
       },
     ],
     schedule: {
-      title: "Veckoschema",
+      title: "Inskolningsschema",
       days: [
         { day: "Måndag", theme: "Målning", activities: " kl. 10.00-11.00 ute" },
         { day: "Tisdag", theme: "Bakning", activities: "kl. 10.00-11.00 ute" },
