@@ -86,7 +86,8 @@ const ContactSection = () => {
                   {formType === 'interest' ? 'Tack för din anmälan!' : 'Tack för ditt klagomål!'}
                 </h4>
                 <p className="text-muted-foreground">Vi återkommer till dig så snart som möjligt.</p>
-              </div> : formType === 'interest' ? <form onSubmit={handleSubmit} className="space-y-5">
+              </div> : formType === 'interest' ? <form name="interest" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="form-name" value="interest" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="parentName">Vårdnadshavares namn *</Label>
@@ -134,7 +135,8 @@ const ContactSection = () => {
                       {siteContent.form.submitText}
                     </span>}
                 </Button>
-              </form> : <form onSubmit={handleSubmit} className="space-y-5">
+              </form> : <form name="complaint" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="form-name" value="complaint" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="reporterName">Ditt namn *</Label>
