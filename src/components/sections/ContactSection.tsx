@@ -19,14 +19,34 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Tack för din anmälan!",
-      description: "Vi återkommer så snart vi kan."
-    });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: formType === 'interest' ? "Tack för din anmälan!" : "Tack för ditt klagomål!",
+          description: "Vi återkommer så snart vi kan."
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Något gick fel",
+        description: "Vänligen försök igen senare.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <section id="kontakt" className="section-padding">
       <div className="container mx-auto px-4">
@@ -87,6 +107,7 @@ const ContactSection = () => {
                 </h4>
                 <p className="text-muted-foreground">Vi återkommer till dig så snart som möjligt.</p>
               </div> : formType === 'interest' ? <form name="interest" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="form-name" value="interest" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="parentName">Vårdnadshavares namn *</Label>
@@ -135,6 +156,7 @@ const ContactSection = () => {
                     </span>}
                 </Button>
               </form> : <form name="complaint" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="form-name" value="complaint" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="reporterName">Ditt namn *</Label>
