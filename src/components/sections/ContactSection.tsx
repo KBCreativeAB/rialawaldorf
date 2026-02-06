@@ -111,39 +111,39 @@ const ContactSection = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="parentName">Vårdnadshavares namn *</Label>
-                    <Input id="parentName" name="parentName" required className="rounded-xl" placeholder="Ditt namn" />
+                    <Input id="parentName" name="Vårdnadshavare" required className="rounded-xl" placeholder="Ditt namn" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">E-postadress *</Label>
-                    <Input id="email" name="email" type="email" required className="rounded-xl" placeholder="din@email.se" />
+                    <Input id="email" name="E-post" type="email" required className="rounded-xl" placeholder="din@email.se" />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefon *</Label>
-                    <Input id="phone" name="phone" type="tel" required className="rounded-xl" placeholder="070 123 45 67" />
+                    <Input id="phone" name="Telefonnummer" type="tel" required className="rounded-xl" placeholder="070 123 45 67" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="childName">Barnets namn *</Label>
-                    <Input id="childName" name="childName" required className="rounded-xl" placeholder="Barnets förnamn" />
+                    <Input id="childName" name="Barnets_namn" required className="rounded-xl" placeholder="Barnets förnamn" />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="childBirthdate">Barnets födelsedatum *</Label>
-                    <Input id="childBirthdate" name="childBirthdate" type="date" required className="rounded-xl" />
+                    <Input id="childBirthdate" name="Barnets_födelsedatum" type="date" required className="rounded-xl" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="desiredStart">Önskat startdatum *</Label>
-                    <Input id="desiredStart" name="desiredStart" type="date" required className="rounded-xl" />
+                    <Input id="desiredStart" name="Önskat_startdatum" type="date" required className="rounded-xl" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Meddelande</Label>
-                  <Textarea id="message" name="message" rows={4} className="rounded-xl resize-none" placeholder="Berätta gärna lite om er familj och varför ni är intresserade av Riala Waldorfförskola..." />
+                  <Textarea id="message" name="Meddelande" rows={4} className="rounded-xl resize-none" placeholder="Berätta gärna lite om er familj och varför ni är intresserade av Riala Waldorfförskola..." />
                 </div>
 
                 <Button type="submit" variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
@@ -160,22 +160,22 @@ const ContactSection = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="reporterName">Ditt namn *</Label>
-                    <Input id="reporterName" name="reporterName" required className="rounded-xl" placeholder="Ditt namn" />
+                    <Input id="reporterName" name="Anmälarens_namn" required className="rounded-xl" placeholder="Ditt namn" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="damageEmail">E-postadress *</Label>
-                    <Input id="damageEmail" name="damageEmail" type="email" required className="rounded-xl" placeholder="din@email.se" />
+                    <Input id="damageEmail" name="E-post" type="email" required className="rounded-xl" placeholder="din@email.se" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="complaintPhone">Telefon *</Label>
-                  <Input id="complaintPhone" name="complaintPhone" type="tel" required className="rounded-xl" placeholder="070 123 45 67" />
+                  <Input id="complaintPhone" name="Telefonnummer" type="tel" required className="rounded-xl" placeholder="070 123 45 67" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="complaintDescription">Beskriv ditt klagomål *</Label>
-                  <Textarea id="complaintDescription" name="complaintDescription" rows={4} required className="rounded-xl resize-none" placeholder="Beskriv vad klagomålet gäller..." />
+                  <Textarea id="complaintDescription" name="Klagomål" rows={4} required className="rounded-xl resize-none" placeholder="Beskriv vad klagomålet gäller..." />
                 </div>
 
                 <Button type="submit" variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
