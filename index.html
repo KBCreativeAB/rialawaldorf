@@ -4,26 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riala Waldorfförskola - Trygg plats för lek och lärande sedan 1994</title>
-    <meta name="description" content="Riala Waldorfförskola i Norrtälje kommun erbjuder en hemlik och trygg miljö för barn med waldorfpedagogik sedan 1994. Utbildad personal i Barn HLR." />
-    <meta name="keywords" content="waldorfförskola, förskola Riala, Norrtälje, waldorfpedagogik, ekologisk mat, barn HLR" />
+    <meta
+      name="description"
+      content="Riala Waldorfförskola i Norrtälje kommun erbjuder en hemlik och trygg miljö för barn med waldorfpedagogik sedan 1994. Utbildad personal i Barn HLR."
+    />
+    <meta
+      name="keywords"
+      content="waldorfförskola, förskola Riala, Norrtälje, waldorfpedagogik, ekologisk mat, barn HLR"
+    />
     <meta name="author" content="Riala Waldorfförskola" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:title" content="Riala Waldorfförskola - Trygg plats för lek och lärande sedan 1994" />
-    <meta property="og:description" content="En hemlik och trygg miljö för barn med waldorfpedagogik sedan 1994 i Norrtälje kommun." />
+    <meta
+      property="og:description"
+      content="En hemlik och trygg miljö för barn med waldorfpedagogik sedan 1994 i Norrtälje kommun."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Riala Waldorfförskola" />
-    <meta name="twitter:description" content="Waldorfpedagogik sedan 1994 - ekologisk mat, hemlik miljö, utbildad personal i Barn HLR." />
+    <meta
+      name="twitter:description"
+      content="Waldorfpedagogik sedan 1994 - ekologisk mat, hemlik miljö, utbildad personal i Barn HLR."
+    />
     <meta name="twitter:image" content="/og-image.png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <form name="interest" netlify hidden>
+      <input type="text" name="parentName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="childName" />
+      <input type="date" name="childBirthdate" />
+      <input type="date" name="desiredStart" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="complaint" netlify hidden>
+      <input type="text" name="reporterName" />
+      <input type="email" name="damageEmail" />
+      <input type="tel" name="complaintPhone" />
+      <textarea name="complaintDescription"></textarea>
+    </form>
   </body>
 </html>
