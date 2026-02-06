@@ -39,20 +39,22 @@
     <script type="module" src="/src/main.tsx"></script>
 
     <form name="interest" netlify hidden>
-      <input type="text" name="parentName" />
-      <input type="email" name="email" />
-      <input type="tel" name="phone" />
-      <input type="text" name="childName" />
-      <input type="date" name="childBirthdate" />
-      <input type="date" name="desiredStart" />
-      <textarea name="message"></textarea>
+      <input type="hidden" name="subject" />
+      <input type="text" name="Vårdnadshavare" />
+      <input type="email" name="E-post" />
+      <input type="tel" name="Telefonnummer" />
+      <input type="text" name="Barnets_namn" />
+      <input type="date" name="Barnets_födelsedatum" />
+      <input type="date" name="Önskat_startdatum" />
+      <textarea name="Meddelande"></textarea>
     </form>
 
     <form name="complaint" netlify hidden>
-      <input type="text" name="reporterName" />
-      <input type="email" name="damageEmail" />
-      <input type="tel" name="complaintPhone" />
-      <textarea name="complaintDescription"></textarea>
+      <input type="hidden" name="subject" />
+      <input type="text" name="Anmälarens_namn" />
+      <input type="email" name="E-post" />
+      <input type="tel" name="Telefonnummer" />
+      <textarea name="Klagomål"></textarea>
     </form>
   </body>
 </html>
