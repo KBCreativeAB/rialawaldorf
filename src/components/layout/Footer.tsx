@@ -1,6 +1,7 @@
 import { Heart, Phone, MapPin } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
 import logo from '@/assets/riala-logo.png';
+import { netlifyImageUrl } from '@/lib/netlifyImage';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Riala Waldorfförskola" className="h-12 w-auto" />
+              <img src={netlifyImageUrl(logo, { width: 96, quality: 85 })} alt="Riala Waldorfförskola" className="h-12 w-auto" />
               <span className="font-serif font-semibold text-xl">
                 Riala Waldorfförskola
               </span>
