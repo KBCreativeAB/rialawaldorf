@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Shield, Home, Leaf, ArrowDown, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
-import { netlifyImageUrl } from "@/lib/netlifyImage";
+import { netlifyImageUrl, netlifyImageSrcSet } from "@/lib/netlifyImage";
 import OptimizedImage from "@/components/OptimizedImage";
 import heroBg from "@/assets/hero-bg.png";
 import preschoolBuilding from "@/assets/preschool-building.jpeg";
@@ -32,6 +32,8 @@ const HeroSection = () => {
       >
         <img
           src={netlifyImageUrl(heroBg, { width: 1920, quality: 75 })}
+          srcSet={netlifyImageSrcSet(heroBg, [640, 1024, 1920], { quality: 75 }) || undefined}
+          sizes="100vw"
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
