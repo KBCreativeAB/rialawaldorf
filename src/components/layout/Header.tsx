@@ -3,6 +3,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteContent } from '@/data/siteContent';
 import rialaLogo from '@/assets/riala-logo.png';
+import { netlifyImageUrl } from '@/lib/netlifyImage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#hem" className="flex items-center gap-3">
             <img 
-              src={rialaLogo} 
+              src={netlifyImageUrl(rialaLogo, { width: 160, quality: 85 })} 
               alt="Riala Waldorfförskola logotyp" 
               className="h-16 md:h-20 w-auto"
             />

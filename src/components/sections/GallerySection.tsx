@@ -1,3 +1,4 @@
+import OptimizedImage from '@/components/OptimizedImage';
 import outdoorPlay from '@/assets/outdoor-play.jpeg';
 import yarnBasket from '@/assets/yarn-basket.jpeg';
 import woolScene from '@/assets/wool-scene.jpeg';
@@ -46,10 +47,13 @@ const GallerySection = () => {
                 index === 0 ? 'col-span-2 row-span-2' : ''
               }`}
             >
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                widths={index === 0 ? [400, 700, 1000] : [300, 500]}
+                sizes={index === 0 ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 50vw, 25vw'}
+                quality={75}
               />
             </div>
           ))}

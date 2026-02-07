@@ -3,8 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Shield, Home, Leaf, ArrowDown, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/data/siteContent";
+import { netlifyImageUrl } from "@/lib/netlifyImage";
+import OptimizedImage from "@/components/OptimizedImage";
 import heroBg from "@/assets/hero-bg.png";
 import preschoolBuilding from "@/assets/preschool-building.jpeg";
+
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -28,7 +31,7 @@ const HeroSection = () => {
         }}
       >
         <img
-          src={heroBg}
+          src={netlifyImageUrl(heroBg, { width: 1920, quality: 75 })}
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
@@ -74,10 +77,12 @@ const HeroSection = () => {
           {/* Image */}
           <div className="relative animate-fade-in">
             <div className="relative rounded-3xl overflow-hidden shadow-card">
-              <img
+              <OptimizedImage
                 src={preschoolBuilding}
                 alt="Riala Waldorfförskola - röd stuga med trädgård"
                 className="w-full h-auto object-cover object-center aspect-[4/3]"
+                widths={[600, 900, 1200]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"

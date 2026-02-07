@@ -1,5 +1,6 @@
 import { Users } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
+import OptimizedImage from '@/components/OptimizedImage';
 import berryBasket from '@/assets/berry-basket.jpeg';
 
 const BoardSection = () => {
@@ -16,7 +17,7 @@ const BoardSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 lg:gap-4 max-w-6xl mx-auto">
-          {siteContent.board.members.map((member, index) => (
+          {siteContent.board.members.map((member) => (
             <div
               key={member.name}
               className="flex flex-col items-center justify-center text-center p-6 md:p-8 rounded-3xl bg-card hover:shadow-card transition-all group"
@@ -36,10 +37,12 @@ const BoardSection = () => {
         {/* About section */}
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-3xl overflow-hidden shadow-card">
-            <img
+            <OptimizedImage
               src={berryBasket}
               alt="Korg med lingon plockade i naturen"
               className="w-full h-auto object-cover aspect-[4/3]"
+              widths={[400, 700, 1000]}
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           <div>
@@ -51,10 +54,7 @@ const BoardSection = () => {
             </p>
             <div className="space-y-4">
               {siteContent.about.features.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="flex items-start gap-4"
-                >
+                <div key={feature.title} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-secondary/50 flex items-center justify-center text-coral">
                     <span className="text-lg">✓</span>
                   </div>
